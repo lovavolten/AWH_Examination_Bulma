@@ -1,0 +1,65 @@
+@font-face {
+   /* deklarerar typsnitt */
+   font-family: Raleway;
+   src: url("fonts/raleway-semibold-webfont.woff") format("woff"),
+      url("fonts/raleway-semibold-webfont.woff2") format("woff2");
+   /* erbjuder 2 olika format så att det finns en "back-up" om den första inte fungerar */
+}
+
+html {
+   /* bakgrundsfärg på själva dokumentet som skulle synas i det fall att innehållet inte täcker hela sidan */
+   background-color: #35191d;
+}
+
+* {
+   /* anger att Raleway typsnittet ska användas för allt på sidan, men anger även ett flertal standard typsnitt 
+   som kan användas om det skulle bli något fel med Raleway, t.ex att webbläsaren inte stöder det, etc. */
+   font-family: Raleway, "Gill Sans", "Trebuchet MS", Arial, sans-serif;
+   /* ökar avtståndet mellan bokstäver lite för ökad läsbarhet */
+   letter-spacing: 0.18rem;
+}
+
+h1 {
+   /* bestämmer storlek på h1 då bulmas standard storlekar kändes för små för så som jag vill ha h1 */
+   font-size: 5.5rem;
+}
+
+.bigger-line-height {
+   /* lite större avstånd mellan rader för ökad läsbarhet vid behov */
+   line-height: 1.7rem;
+}
+
+.bigger-letter-spacing {
+   /* lite större avstånd mellan bokstäver för ytterliggare läsbarhet vid behov */
+   letter-spacing: 0.13rem;
+}
+
+.searchbar {
+   /* sätter tjocklek och färg på ramen runt sökrutan eftersom bulmas standard val inte matchade */
+   border: 2px solid #33000a;
+}
+
+.hero {
+   /* sätter en bild i hero elementet med en svart ton ovanpå för att den ska bli mörkare och ge bättre kontrast
+   mot texten */
+   background: linear-gradient(rgb(0 0 0 / 0.4), rgb(0 0 0 / 0.4)),
+      url("images/cat_banner.JPG"), #543d2c;
+   background-size: cover;
+   background-position: center;
+}
+
+.card-content {
+   /* ger en liten border till botten av "card" elementen, smaksak */
+   border: 3px dashed #33000a;
+}
+
+.price {
+   /* ger en liten skugga till texten för priset på "card" elementen, smaksak */
+   text-shadow: -1.5px 1.5px 2px #b96072;
+}
+
+table {
+   /* centrerar tabellen oavsett skärmstorlek, smaksak */
+   margin-left: auto;
+   margin-right: auto;
+}

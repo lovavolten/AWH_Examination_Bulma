@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Examinationsuppgift" />
+      <meta name="author" content="Lova Avoltén" />
+      <title>MeowMart - Köp en katt online</title>
+      <link href="node_modules/bulma/css/bulma.min.css" rel="stylesheet" />
+      <link href="personalized.css" rel="stylesheet" />
+      <link href="images/logo.png" rel="icon" />
+   </head>
+
+   <!-- sätter färger på hela body och säger att navbar är "fixed" vid toppen så att body justerar sin position så att navbar hamnar ovanför 
+    body och inte täcker body -->
+   <body
+      class="has-background-danger-95 has-text-danger-dark has-navbar-fixed-top">
+      <!-- div:en här blir den yttersta containern till sidans innehåll, bestämmer att griden endast ska ha 1 kolumn -->
+      <div class="fixed-grid has-1-cols">
+         <!-- inre grid container som också säger att det inte ska vara något mellanrum mellan grid celler -->
+         <div class="grid is-gap-0">
+            <!-- header blir den första cellen i griden -->
+            <header class="cell">
+               <!-- navbar via bulma standard, sätter den även som "fixed" vid toppen av sidan ("sticky") så att den alltid syns även om man 
+                bläddrar ned, med en liten skugga under -->
+               <nav
+                  class="navbar is-danger has-text-weight-bold px-5 is-fixed-top has-shadow"
+                  role="navigation"
+                  aria-label="main navigation">
+                  <div class="navbar-brand">
+                     <a href="index.html" class="bigger-line-height">
+                        <img
+                           class="logo"
+                           src="images/logo.png"
+                           alt="MeowMart logotyp" />
+                     </a>
+                     <a
+                        role="button"
+                        class="navbar-burger bigger-line-height"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                     </a>
+                  </div>
+
+                  <div id="navbarBasicExample" class="navbar-menu pl-6">
+                     <div class="navbar-start is-size-5">
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="index.html">
+                           Start
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                           <a class="navbar-link bigger-line-height">
+                              Information
+                           </a>
+
+                           <div class="navbar-dropdown">
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="about.html">
+                                 Om MeowMart
+                              </a>
+                              <hr class="navbar-divider" />
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="faq.html">
+                                 Vanliga frågor
+                              </a>
+                           </div>
+                        </div>
+
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="news.html">
+                           Nyheter
+                        </a>
+                     </div>
+
+                     <div class="navbar-end">
+                        <div class="navbar-item">
+                           <input
+                              class="searchbar input is-normal has-background-white has-text-danger-dark is-rounded bigger-letter-spacing"
+                              data-theme="light"
+                              type="text"
+                              placeholder="Sök..." />
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </header>
+
+            <!-- hero -->
+            <!-- "hero" enligt bulma, blir också den andra cellen i huvud griden -->
+            <div class="cell hero is-warning has-text-danger-100 p-6">
+               <div class="hero-body has-text-centered has-text-weight-medium">
+                  <h1 class="mt-6">MeowMart</h1>
+                  <p class="is-size-4 is-italic">Köp en katt online</p>
+               </div>
+            </div>
+
+            <!-- main -->
+            <!-- main blir den tredje cellen i huvud griden men är även en grid container i sig, med bestämt mellanrum mellan celler -->
+            <main class="cell grid is-gap-5 pt-6 px-6 mb-0">
+               <!-- allmänt om meowmart, blir den första cellen i griden -->
+               <div class="cell pb-6">
+                  <h2
+                     class="title is-2 has-text-weight-bold has-text-danger-dark">
+                     Om MeowMart
+                  </h2>
+                  <p class="bigger-line-height">
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                     Libero perferendis repellendus quidem exercitationem
+                     cupiditate, mollitia sapiente vero sequi totam, veritatis
+                     accusantium explicabo inventore expedita. Quod, cumque
+                     laboriosam! Consectetur, iure error! Lorem ipsum, dolor sit
+                     amet consectetur adipisicing elit. Reprehenderit, et at.
+                     Esse quis, accusantium veritatis saepe officia quo,
+                     perferendis necessitatibus, est in iste commodi facere
+                     ratione labore vitae fugit et! Lorem ipsum dolor sit, amet
+                     consectetur adipisicing elit. Accusamus, obcaecati saepe
+                     libero, eos recusandae adipisci fugiat vitae magnam cumque
+                     commodi dignissimos dolorum nihil in totam expedita nemo.
+                     Laborum, recusandae neque.
+                  </p>
+                  <h3
+                     class="subtitle is-4 has-text-weight-bold has-text-danger-dark mt-5">
+                     Underrubrik
+                  </h3>
+                  <p class="bigger-line-height">
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                     Minus ducimus sequi molestias? Fugiat sequi culpa
+                     voluptatem error cumque dolorum soluta! Provident eligendi
+                     saepe ratione odit perspiciatis, fugiat itaque impedit
+                     eveniet.
+                  </p>
+               </div>
+
+               <!-- mer ingående fakta om meowmart samt kontakt info, blir den andra cellen i griden -->
+               <div class="cell p-5 mb-6 has-background-danger-90">
+                  <!-- bilden åker till vänster så att texten börjar direkt bredvid den -->
+                  <figure class="image is-128x128 mr-4 is-pulled-left">
+                     <img src="images/cat_profile.jpg" alt="En katt" />
+                  </figure>
+                  <p class="bigger-line-height">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Commodi rem doloremque nisi itaque repudiandae odio quasi,
+                     qui ex debitis modi optio, maxime placeat autem? Nostrum
+                     cum porro non tempore aliquam? Lorem ipsum dolor sit amet
+                     consectetur adipisicing elit. Architecto cupiditate est
+                     magnam quis voluptas at nihil voluptates quae laborum ut
+                     animi molestias non culpa qui, alias doloremque,
+                     consequatur, libero beatae.
+                  </p>
+                  <h3
+                     class="subtitle is-4 has-text-weight-bold has-text-danger-dark mt-5">
+                     Kontakt
+                  </h3>
+                  <p class="bigger-line-height">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit?
+                     Nemo magni quidem ipsa repudiandae debitis corrupti cumque
+                     cum at voluptatibus.
+                  </p>
+                  <ul class="mt-4">
+                     <li class="bigger-line-height">MeowMart</li>
+                     <li class="bigger-line-height">Gatgatan 1A</li>
+                     <li class="bigger-line-height">123 45 Stadstad</li>
+                     <li class="bigger-line-height">kontakt@meowmart.com</li>
+                  </ul>
+               </div>
+            </main>
+
+            <!-- footer -->
+            <!-- footer blir den sista cellen i huvud griden men är även en grid container i sig med 4 kolumner -->
+            <footer
+               class="cell fixed-grid has-4-cols has-background-danger-10 has-text-danger-10-invert px-6 pt-6 pb-4">
+               <!-- inre grid container som bestämmer mellanrummet mellan cellerna i footer -->
+               <div class="grid is-column-gap-5">
+                  <!-- varje sektion i footer blir en cell i griden -->
+                  <!-- sektionen "allmänt" tar upp 2 kolumner för att breda ut sig lite -->
+                  <section class="cell is-col-span-2">
+                     <h2 class="is-size-5 has-text-weight-bold">Allmänt</h2>
+                     <p class="is-italic bigger-line-height">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Quos nesciunt quae officiis itaque deleniti odio
+                        quis nihil rem, quam minima accusantium accusamus
+                        tempora consequuntur porro. Mollitia minus dolorum natus
+                        eveniet repellat at impedit. Natus adipisci ut iste
+                        enim, sint eveniet!
+                     </p>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Navigation</h2>
+                     <nav>
+                        <ul>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="index.html"
+                                 >Start</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="about.html"
+                                 >Om MeowMart</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="faq.html"
+                                 >Vanliga frågor</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="news.html"
+                                 >Nyheter</a
+                              >
+                           </li>
+                        </ul>
+                     </nav>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Kontakt</h2>
+                     <ul class="is-italic">
+                        <li class="bigger-line-height">MeowMart</li>
+                        <li class="bigger-line-height">Gatgatan 1A</li>
+                        <li class="bigger-line-height">123 45 Stadstad</li>
+                        <li class="bigger-line-height">kontakt@meowmart.com</li>
+                     </ul>
+                  </section>
+                  <section class="cell is-col-span-4 has-text-centered">
+                     <h2 class="is-size-7 mt-4 bigger-letter-spacing">
+                        MeowMart.com <br />Copyright © 2025 Lova Avoltén
+                     </h2>
+                  </section>
+               </div>
+            </footer>
+         </div>
+      </div>
+   </body>
+</html>

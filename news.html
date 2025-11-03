@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Examinationsuppgift" />
+      <meta name="author" content="Lova Avoltén" />
+      <title>MeowMart - Köp en katt online</title>
+      <link href="node_modules/bulma/css/bulma.min.css" rel="stylesheet" />
+      <link href="personalized.css" rel="stylesheet" />
+      <link href="images/logo.png" rel="icon" />
+   </head>
+
+   <!-- sätter färger på hela body och säger att navbar är "fixed" vid toppen så att body justerar sin position så att navbar hamnar ovanför 
+    body och inte täcker body -->
+   <body
+      class="has-background-danger-95 has-text-danger-dark has-navbar-fixed-top">
+      <!-- div:en här blir den yttersta containern till sidans innehåll, bestämmer att griden endast ska ha 1 kolumn -->
+      <div class="fixed-grid has-1-cols">
+         <!-- inre grid container som också säger att det inte ska vara något mellanrum mellan grid celler -->
+         <div class="grid is-gap-0">
+            <!-- header blir den första cellen i griden -->
+            <header class="cell">
+               <!-- navbar via bulma standard, sätter den även som "fixed" vid toppen av sidan ("sticky") så att den alltid syns även om man 
+                bläddrar ned, med en liten skugga under -->
+               <nav
+                  class="navbar is-danger has-text-weight-bold px-5 is-fixed-top has-shadow"
+                  role="navigation"
+                  aria-label="main navigation">
+                  <div class="navbar-brand">
+                     <a href="index.html" class="bigger-line-height">
+                        <img
+                           class="logo"
+                           src="images/logo.png"
+                           alt="MeowMart logotyp" />
+                     </a>
+                     <a
+                        role="button"
+                        class="navbar-burger bigger-line-height"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                     </a>
+                  </div>
+
+                  <div id="navbarBasicExample" class="navbar-menu pl-6">
+                     <div class="navbar-start is-size-5">
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="index.html">
+                           Start
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                           <a class="navbar-link bigger-line-height">
+                              Information
+                           </a>
+
+                           <div class="navbar-dropdown">
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="about.html">
+                                 Om MeowMart
+                              </a>
+                              <hr class="navbar-divider" />
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="faq.html">
+                                 Vanliga frågor
+                              </a>
+                           </div>
+                        </div>
+
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="news.html">
+                           Nyheter
+                        </a>
+                     </div>
+
+                     <div class="navbar-end">
+                        <div class="navbar-item">
+                           <input
+                              class="searchbar input is-normal has-background-white has-text-danger-dark is-rounded bigger-letter-spacing"
+                              data-theme="light"
+                              type="text"
+                              placeholder="Sök..." />
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </header>
+
+            <!-- hero -->
+            <!-- "hero" enligt bulma, blir också den andra cellen i huvud griden -->
+            <div class="cell hero is-warning has-text-danger-100 p-6">
+               <div class="hero-body has-text-centered has-text-weight-medium">
+                  <h1 class="mt-6">MeowMart</h1>
+                  <p class="is-size-4 is-italic">Köp en katt online</p>
+               </div>
+            </div>
+
+            <!-- main -->
+            <!-- main blir den tredje cellen i huvud griden -->
+            <main class="cell pt-6 px-6 mb-0">
+               <!-- nyheter, med centrerad rubrik -->
+               <div class="has-text-centered">
+                  <h2
+                     class="title is-2 has-text-weight-bold has-text-danger-dark">
+                     Nyheter
+                  </h2>
+               </div>
+
+               <!-- meddelande om speciellt relevant information/nyhet/varning enligt bulma "message" -->
+               <article class="message is-danger my-5">
+                  <div class="message-header">
+                     <p>Viktig information</p>
+                     <button class="delete" aria-label="delete"></button>
+                  </div>
+                  <div class="message-body">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     <strong>Pellentesque risus mi</strong>, tempus quis
+                     placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit
+                     amet fringilla. Nullam gravida purus diam, et dictum
+                     <a>felis venenatis</a> efficitur. Aenean ac
+                     <em>eleifend lacus</em>, in mollis lectus. Donec sodales,
+                     arcu et sollicitudin porttitor, tortor urna tempor ligula,
+                     id porttitor mi magna a neque. Donec dui urna, vehicula et
+                     sem eget, facilisis sodales sem.
+                  </div>
+               </article>
+
+               <!-- en grid med alla olika nyheter, bästämmer storlek på kolumner och mellanrummet mellan celler -->
+               <div class="grid mb-6 is-col-min-20 is-gap-5 mt-6 px-5">
+                  <!-- media inlägg direkt från företaget t.ex gällande någon typ av systemuppdatering, första cellen i griden -->
+                  <article class="cell media is-block has-background-white p-3">
+                     <div class="media-content">
+                        <!-- taggar som visar vilka områden nyheten berör -->
+                        <span class="tag is-danger bigger-letter-spacing"
+                           >Direkt från MeowMart</span
+                        >
+                        <span class="tag is-link bigger-letter-spacing"
+                           >System</span
+                        >
+                        <span class="tag is-success bigger-letter-spacing"
+                           >Uppdatering</span
+                        >
+                        <div class="content">
+                           <p class="bigger-line-height">
+                              <strong class="has-text-danger-dark"
+                                 >MeowMart</strong
+                              >
+                              <small>@meowmart</small> <small>31m</small>
+                              <br />
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Proin ornare magna eros, eu pellentesque
+                              tortor vestibulum ut. Maecenas non massa sem.
+                              Etiam finibus odio quis feugiat facilisis.
+                              <br />
+                              <br />
+                              <small><a>Like</a> · 31m</small>
+                           </p>
+                        </div>
+                     </div>
+                  </article>
+
+                  <!-- allmän nyhet, t.ex ett event med specialerbjudande en viss tid, en annan cell i griden -->
+                  <div class="cell has-background-danger-90 p-4">
+                     <h3 class="subtitle is-4 has-text-danger-dark">
+                        28/10-25 | Sapiente delectus
+                     </h3>
+                     <p class="bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam eligendi quae, sint facere optio minus
+                        dignissimos non ut vel, nam sapiente delectus
+                        architecto? Rerum, doloribus. Cumque quasi quibusdam
+                        libero a!
+                     </p>
+                     <ul class="mt-3">
+                        <li class="bigger-line-height">Datum: 20/12-2025</li>
+                        <li class="bigger-line-height">Tid: 8:00-22:00</li>
+                     </ul>
+                     <!-- taggar som visar vilka områden nyheten berör -->
+                     <span class="tag is-danger is-light bigger-letter-spacing"
+                        >Event</span
+                     >
+                     <span class="tag is-danger is-light bigger-letter-spacing"
+                        >Erbjudanden</span
+                     >
+                  </div>
+
+                  <!-- allmän nyhet, informativ, en annan cell i griden -->
+                  <div class="cell has-background-danger-90 p-4">
+                     <h3 class="subtitle is-4 has-text-danger-dark">
+                        22/10-25 | Excepturi
+                     </h3>
+
+                     <!-- bilden åker till höger så att texten kan vara bredvid den -->
+                     <figure class="image is-128x128 mr-4 is-pulled-right">
+                        <img src="images/cat_profile.jpg" alt="En katt" />
+                     </figure>
+                     <p class="bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi facilis ducimus optio quos adipisci aperiam
+                        debitis architecto alias ratione atque, vel cum aut
+                        aliquid? Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Ad dolores, voluptatum odit saepe
+                        dolorem ducimus quas qui sunt nemo repellendus ratione
+                        impedit voluptatibus vero assumenda maiores facere
+                        architecto delectus omnis?
+                     </p>
+                     <br />
+                     <p class="bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vero voluptas atque non! Accusantium exercitationem
+                        iusto quibusdam ipsum suscipit dolores sunt aperiam.
+                        Excepturi, facilis aspernatur. Sequi molestiae.
+                     </p>
+                     <!-- taggar som visar vilka områden nyheten berör -->
+                     <span class="tag is-info is-light bigger-letter-spacing"
+                        >Information</span
+                     >
+                  </div>
+
+                  <!-- media inlägg direkt från företaget t.ex gällande viktig information för kunder, en annan cell i griden -->
+                  <article class="cell media is-block has-background-white p-3">
+                     <div class="media-content">
+                        <!-- taggar som visar vilka områden nyheten berör -->
+                        <span class="tag is-danger bigger-letter-spacing"
+                           >Direkt från MeowMart</span
+                        >
+                        <span class="tag is-warning bigger-letter-spacing"
+                           >Viktigt</span
+                        >
+                        <div class="content">
+                           <p class="bigger-line-height">
+                              <strong class="has-text-danger-dark"
+                                 >MeowMart</strong
+                              >
+                              <small>@meowmart</small> <small>7d</small>
+                              <br />
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Proin ornare magna eros, eu pellentesque
+                              tortor vestibulum ut. Maecenas non massa sem.
+                              Etiam finibus odio quis feugiat facilisis.
+                              <br />
+                              <br />
+                              <small><a>Like</a> · 7d</small>
+                           </p>
+                        </div>
+                     </div>
+                     <!-- nästlad fortsättning på media inlägg direkt från företaget/svar/tråd -->
+                     <article class="media has-background-white pl-3 is-block">
+                        <div class="media-content">
+                           <div class="content">
+                              <p class="bigger-line-height">
+                                 <strong class="has-text-danger-dark"
+                                    >MeowMart</strong
+                                 >
+                                 <small>@meowmart</small> <small>6d</small>
+                                 <br />
+                                 Lorem ipsum dolor sit, amet consectetur
+                                 adipisicing elit. Neque alias consectetur
+                                 dolorum tenetur fuga saepe quaerat sunt minima
+                                 laborum est ipsam, iste asperiores! Possimus
+                                 excepturi soluta facilis voluptates eaque
+                                 ipsam.
+
+                                 <br />
+                                 <br />
+                                 <small><a>Like</a> · 6d</small>
+                              </p>
+                           </div>
+                        </div>
+                     </article>
+                  </article>
+
+                  <!-- allmän nyhet, t.ex ett specialerbjudande under en viss period, en annan cell i griden -->
+                  <div class="cell has-background-danger-90 p-4">
+                     <h3 class="subtitle is-4 has-text-danger-dark">
+                        13/9-25 | Voluptatibus commodi ex
+                     </h3>
+                     <p class="bigger-line-height">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Voluptatibus commodi ex similique debitis
+                        dignissimos. Eum, delectus reprehenderit earum sequi
+                        quibusdam dolor, praesentium maiores porro veniam alias
+                        rerum molestiae.
+                     </p>
+                     <br />
+                     <p class="bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempore cumque animi deleniti dolores eius recusandae
+                        asperiores ad facilis delectus obcaecati?
+                     </p>
+                     <ul class="my-3">
+                        <li class="bigger-line-height">
+                           Start: 2/11-2025 15:00
+                        </li>
+                        <li class="bigger-line-height">
+                           Slut: 12/11-2025 23:59
+                        </li>
+                     </ul>
+                     <p class="bigger-line-height">
+                        Sapiente alias fugiat error corporis.
+                     </p>
+                     <!-- taggar som visar vilka områden nyheten berör -->
+                     <span class="tag is-danger is-light bigger-letter-spacing"
+                        >Erbjudanden</span
+                     >
+                  </div>
+
+                  <!-- allmän nyhet, informativ, t.ex gällande system/webbplatsen, en annan cell i griden -->
+                  <div class="cell has-background-danger-90 p-4">
+                     <h3 class="subtitle is-4 has-text-danger-dark">
+                        2/9-25 | Natus
+                     </h3>
+                     <p class="bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus deserunt vero molestias provident qui ex quod,
+                        atque dolor ducimus suscipit voluptatibus, ullam dicta
+                        ut reiciendis assumenda nam ipsum velit. Minima
+                        repellendus.
+                     </p>
+                     <figure class="image is-3by1 my-1">
+                        <img
+                           src="images/cat_banner.jpg"
+                           alt="En sovande katt" />
+                     </figure>
+                     <!-- taggar som visar vilka områden nyheten berör -->
+                     <span class="tag is-info is-light bigger-letter-spacing"
+                        >Information</span
+                     >
+                     <span class="tag is-link bigger-letter-spacing"
+                        >System</span
+                     >
+                  </div>
+               </div>
+
+               <!-- möjlighet att se fler äldre nyheter, gjort med flex för att kunna centrera knappen på sidan -->
+               <div
+                  class="is-flex is-flex-direction-row is-justify-content-center mb-6">
+                  <button class="button is-danger bigger-letter-spacing">
+                     Visa äldre nyheter
+                  </button>
+               </div>
+            </main>
+
+            <!-- footer -->
+            <!-- footer blir den sista cellen i huvud griden men är även en grid container i sig med 4 kolumner -->
+            <footer
+               class="cell fixed-grid has-4-cols has-background-danger-10 has-text-danger-10-invert px-6 pt-6 pb-4">
+               <!-- inre grid container som bestämmer mellanrummet mellan cellerna i footer -->
+               <div class="grid is-column-gap-5">
+                  <!-- varje sektion i footer blir en cell i griden -->
+                  <!-- sektionen "allmänt" tar upp 2 kolumner för att breda ut sig lite -->
+                  <section class="cell is-col-span-2">
+                     <h2 class="is-size-5 has-text-weight-bold">Allmänt</h2>
+                     <p class="is-italic bigger-line-height">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Quos nesciunt quae officiis itaque deleniti odio
+                        quis nihil rem, quam minima accusantium accusamus
+                        tempora consequuntur porro. Mollitia minus dolorum natus
+                        eveniet repellat at impedit. Natus adipisci ut iste
+                        enim, sint eveniet!
+                     </p>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Navigation</h2>
+                     <nav>
+                        <ul>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="index.html"
+                                 >Start</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="about.html"
+                                 >Om MeowMart</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="faq.html"
+                                 >Vanliga frågor</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="news.html"
+                                 >Nyheter</a
+                              >
+                           </li>
+                        </ul>
+                     </nav>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Kontakt</h2>
+                     <ul class="is-italic">
+                        <li class="bigger-line-height">MeowMart</li>
+                        <li class="bigger-line-height">Gatgatan 1A</li>
+                        <li class="bigger-line-height">123 45 Stadstad</li>
+                        <li class="bigger-line-height">kontakt@meowmart.com</li>
+                     </ul>
+                  </section>
+                  <section class="cell is-col-span-4 has-text-centered">
+                     <h2 class="is-size-7 mt-4 bigger-letter-spacing">
+                        MeowMart.com <br />Copyright © 2025 Lova Avoltén
+                     </h2>
+                  </section>
+               </div>
+            </footer>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Examinationsuppgift" />
+      <meta name="author" content="Lova Avoltén" />
+      <title>MeowMart - Köp en katt online</title>
+      <link href="node_modules/bulma/css/bulma.min.css" rel="stylesheet" />
+      <link href="personalized.css" rel="stylesheet" />
+      <link href="images/logo.png" rel="icon" />
+   </head>
+
+   <!-- sätter färger på hela body och säger att navbar är "fixed" vid toppen så att body justerar sin position så att navbar hamnar ovanför 
+    body och inte täcker body -->
+   <body
+      class="has-background-danger-95 has-text-danger-dark has-navbar-fixed-top">
+      <!-- div:en här blir den yttersta containern till sidans innehåll, bestämmer att griden endast ska ha 1 kolumn -->
+      <div class="fixed-grid has-1-cols">
+         <!-- inre grid container som också säger att det inte ska vara något mellanrum mellan grid celler -->
+         <div class="grid is-gap-0">
+            <!-- header blir den första cellen i griden -->
+            <header class="cell">
+               <!-- navbar via bulma standard, sätter den även som "fixed" vid toppen av sidan ("sticky") så att den alltid syns även om man 
+                bläddrar ned, med en liten skugga under -->
+               <nav
+                  class="navbar is-danger has-text-weight-bold px-5 is-fixed-top has-shadow"
+                  role="navigation"
+                  aria-label="main navigation">
+                  <div class="navbar-brand">
+                     <a href="index.html" class="bigger-line-height">
+                        <img
+                           class="logo"
+                           src="images/logo.png"
+                           alt="MeowMart logotyp" />
+                     </a>
+                     <a
+                        role="button"
+                        class="navbar-burger bigger-line-height"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                     </a>
+                  </div>
+
+                  <div id="navbarBasicExample" class="navbar-menu pl-6">
+                     <div class="navbar-start is-size-5">
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="index.html">
+                           Start
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                           <a class="navbar-link bigger-line-height">
+                              Information
+                           </a>
+
+                           <div class="navbar-dropdown">
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="about.html">
+                                 Om MeowMart
+                              </a>
+                              <hr class="navbar-divider" />
+                              <a
+                                 class="navbar-item bigger-line-height"
+                                 href="faq.html">
+                                 Vanliga frågor
+                              </a>
+                           </div>
+                        </div>
+
+                        <a
+                           class="navbar-item bigger-line-height"
+                           href="news.html">
+                           Nyheter
+                        </a>
+                     </div>
+
+                     <div class="navbar-end">
+                        <div class="navbar-item">
+                           <input
+                              class="searchbar input is-normal has-background-white has-text-danger-dark is-rounded bigger-letter-spacing"
+                              data-theme="light"
+                              type="text"
+                              placeholder="Sök..." />
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </header>
+
+            <!-- hero -->
+            <!-- "hero" enligt bulma, blir också den andra cellen i huvud griden -->
+            <div class="cell hero is-warning has-text-danger-100 p-6">
+               <div class="hero-body has-text-centered has-text-weight-medium">
+                  <h1 class="mt-6">MeowMart</h1>
+                  <p class="is-size-4 is-italic">Köp en katt online</p>
+               </div>
+            </div>
+
+            <!-- main -->
+            <!-- main blir den tredje cellen i huvud griden -->
+            <main class="cell pt-6 px-6 mb-0">
+               <!-- centrerad rubrik -->
+               <div class="has-text-centered">
+                  <h2
+                     class="title is-2 has-text-weight-bold has-text-danger-dark">
+                     Vanliga frågor
+                  </h2>
+               </div>
+
+               <!-- tabell enligt bulma med vanliga frågor och tillhörande svar, tvingas att följa ljust färgtema så att bakgrunden 
+                förblir vit -->
+               <table class="table is-bordered mt-4 mb-6" data-theme="light">
+                  <thead>
+                     <tr class="is-danger">
+                        <th class="has-text-danger-dark is-size-5 p-3">
+                           Fråga
+                        </th>
+                        <th class="has-text-danger-dark is-size-5 p-3">Svar</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur?
+                        </td>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Vero quaerat reiciendis, corporis reprehenderit
+                           laboriosam accusamus dolores exercitationem
+                           consectetur.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur?
+                        </td>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Vero quaerat reiciendis, corporis reprehenderit
+                           laboriosam accusamus dolores exercitationem
+                           consectetur.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur?
+                        </td>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Vero quaerat reiciendis, corporis reprehenderit
+                           laboriosam accusamus dolores exercitationem
+                           consectetur.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur?
+                        </td>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Vero quaerat reiciendis, corporis reprehenderit
+                           laboriosam accusamus dolores exercitationem
+                           consectetur.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur?
+                        </td>
+                        <td
+                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Vero quaerat reiciendis, corporis reprehenderit
+                           laboriosam accusamus dolores exercitationem
+                           consectetur.
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+
+               <!-- för användare som har en fråga som inte besvaras bland vanliga frågor -->
+               <div class="has-text-centered">
+                  <!-- centrerad rubrik -->
+                  <h2
+                     class="title is-2 has-text-weight-bold has-text-danger-dark">
+                     Annan fråga
+                  </h2>
+               </div>
+               <!-- kort förklaring om syfte -->
+               <!-- använder flex för att uppnå en helt vertikalt centrerad layout för både bilden och tillhörande texten -->
+               <div
+                  class="mx-6 my-4 has-text-centered is-flex is-flex-direction-column is-align-items-center">
+                  <figure class="image is-96x96 mb-3">
+                     <img
+                        class="is-rounded"
+                        src="images/cat_profile.jpg"
+                        alt="En katt" />
+                  </figure>
+                  <p class="bigger-line-height">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                     Velit accusantium distinctio earum quas ad unde deleniti
+                     laudantium enim, odit, recusandae nesciunt quibusdam
+                     exercitationem tempora delectus. Quod laborum ducimus
+                     ratione quos! Lorem ipsum dolor sit amet consectetur
+                     adipisicing elit. Quaerat illum eum dolores qui,
+                     perferendis repudiandae, doloremque minus a minima ratione
+                     vero deleniti sequi! Minus unde quibusdam error doloribus,
+                     illum dolorem.
+                  </p>
+               </div>
+
+               <!-- formulär enligt bulma där användare skulle kunna skicka in sin egen fråga, tvingas att följa just färgtema så att
+                bakgrunden förblir vit -->
+               <form data-theme="light" class="mx-6 mb-6">
+                  <div class="field">
+                     <label class="label has-text-danger-dark is-size-5"
+                        >Namn</label
+                     >
+                     <div class="control">
+                        <input
+                           class="input bigger-line-height bigger-letter-spacing"
+                           type="text"
+                           placeholder="Ditt namn" />
+                     </div>
+                  </div>
+
+                  <div class="field">
+                     <label class="label has-text-danger-dark is-size-5"
+                        >Email</label
+                     >
+                     <div class="control">
+                        <input
+                           class="input is-danger bigger-line-height bigger-letter-spacing"
+                           type="email"
+                           placeholder="Din email adress"
+                           value="email@email" />
+                     </div>
+                     <p class="help is-danger bigger-line-height">
+                        Ange en giltig email adress
+                     </p>
+                  </div>
+
+                  <div class="field">
+                     <label class="label has-text-danger-dark is-size-5"
+                        >Ämne</label
+                     >
+                     <div class="control">
+                        <div class="select">
+                           <select
+                              class="has-text-danger-dark bigger-letter-spacing">
+                              <option>Allmänt</option>
+                              <option>Katter</option>
+                              <option>Betalning</option>
+                              <option>Säkerhet</option>
+                              <option>Annat</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="field">
+                     <label class="label has-text-danger-dark is-size-5"
+                        >Fråga</label
+                     >
+                     <div class="control">
+                        <textarea
+                           class="textarea bigger-letter-spacing"
+                           placeholder="Skriv din fråga">
+                        </textarea>
+                     </div>
+                  </div>
+
+                  <div class="field">
+                     <p
+                        class="has-text-weight-bold is-size-5 bigger-line-height">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                     </p>
+                     <div class="control">
+                        <label class="radio">
+                           <input
+                              type="radio"
+                              name="question"
+                              class="bigger-line-height bigger-letter-spacing" />
+                           Ja
+                        </label>
+                        <label class="radio">
+                           <input
+                              type="radio"
+                              name="question"
+                              class="bigger-line-height bigger-letter-spacing" />
+                           Nej
+                        </label>
+                     </div>
+                  </div>
+
+                  <div class="field">
+                     <div class="control">
+                        <label class="checkbox">
+                           <input
+                              type="checkbox"
+                              class="bigger-line-height bigger-letter-spacing" />
+                           Jag går med på
+                           <a href="#">villkoren</a>
+                        </label>
+                     </div>
+                  </div>
+
+                  <div class="field is-grouped">
+                     <div class="control">
+                        <button
+                           class="button is-danger is-size-5 bigger-letter-spacing">
+                           Skicka
+                        </button>
+                     </div>
+                     <div class="control">
+                        <button
+                           class="button is-danger is-dark is-size-5 bigger-letter-spacing">
+                           Avbryt
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </main>
+
+            <!-- footer -->
+            <!-- footer blir den sista cellen i huvud griden men är även en grid container i sig med 4 kolumner -->
+            <footer
+               class="cell fixed-grid has-4-cols has-background-danger-10 has-text-danger-10-invert px-6 pt-6 pb-4">
+               <!-- inre grid container som bestämmer mellanrummet mellan cellerna i footer -->
+               <div class="grid is-column-gap-5">
+                  <!-- varje sektion i footer blir en cell i griden -->
+                  <!-- sektionen "allmänt" tar upp 2 kolumner för att breda ut sig lite -->
+                  <section class="cell is-col-span-2">
+                     <h2 class="is-size-5 has-text-weight-bold">Allmänt</h2>
+                     <p class="is-italic bigger-line-height">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Quos nesciunt quae officiis itaque deleniti odio
+                        quis nihil rem, quam minima accusantium accusamus
+                        tempora consequuntur porro. Mollitia minus dolorum natus
+                        eveniet repellat at impedit. Natus adipisci ut iste
+                        enim, sint eveniet!
+                     </p>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Navigation</h2>
+                     <nav>
+                        <ul>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="index.html"
+                                 >Start</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="about.html"
+                                 >Om MeowMart</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="faq.html"
+                                 >Vanliga frågor</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 class="has-text-danger-85 is-underlined is-italic bigger-line-height"
+                                 href="news.html"
+                                 >Nyheter</a
+                              >
+                           </li>
+                        </ul>
+                     </nav>
+                  </section>
+                  <section class="cell">
+                     <h2 class="is-size-5 has-text-weight-bold">Kontakt</h2>
+                     <ul class="is-italic">
+                        <li class="bigger-line-height">MeowMart</li>
+                        <li class="bigger-line-height">Gatgatan 1A</li>
+                        <li class="bigger-line-height">123 45 Stadstad</li>
+                        <li class="bigger-line-height">kontakt@meowmart.com</li>
+                     </ul>
+                  </section>
+                  <section class="cell is-col-span-4 has-text-centered">
+                     <h2 class="is-size-7 mt-4 bigger-letter-spacing">
+                        MeowMart.com <br />Copyright © 2025 Lova Avoltén
+                     </h2>
+                  </section>
+               </div>
+            </footer>
+         </div>
+      </div>
+   </body>
+</html>
