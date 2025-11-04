@@ -37,7 +37,7 @@
                      </a>
                      <a
                         role="button"
-                        class="navbar-burger bigger-line-height"
+                        class="navbar-burger bigger-line-height has-text-danger-dark"
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample">
@@ -98,10 +98,16 @@
 
             <!-- hero -->
             <!-- "hero" enligt bulma, blir också den andra cellen i huvud griden -->
-            <div class="cell hero is-warning has-text-danger-100 p-6">
-               <div class="hero-body has-text-centered has-text-weight-medium">
-                  <h1 class="mt-6">MeowMart</h1>
-                  <p class="is-size-4 is-italic">Köp en katt online</p>
+            <div class="cell hero p-6">
+               <div class="hero-body has-text-centered">
+                  <p
+                     class="title mt-6 mb-2 hero-title has-text-weight-medium has-text-white">
+                     MeowMart
+                  </p>
+                  <p
+                     class="subtitle is-size-4 is-italic has-text-weight-medium has-text-white">
+                     Köp en katt online
+                  </p>
                </div>
             </div>
 
@@ -110,91 +116,95 @@
             <main class="cell pt-6 px-6 mb-0">
                <!-- centrerad rubrik -->
                <div class="has-text-centered">
-                  <h2
+                  <h1
                      class="title is-2 has-text-weight-bold has-text-danger-dark">
                      Vanliga frågor
-                  </h2>
+                  </h1>
                </div>
 
                <!-- tabell enligt bulma med vanliga frågor och tillhörande svar, tvingas att följa ljust färgtema så att bakgrunden 
-                förblir vit -->
-               <table class="table is-bordered mt-4 mb-6" data-theme="light">
-                  <thead>
-                     <tr class="is-danger">
-                        <th class="has-text-danger-dark is-size-5 p-3">
-                           Fråga
-                        </th>
-                        <th class="has-text-danger-dark is-size-5 p-3">Svar</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur?
-                        </td>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Vero quaerat reiciendis, corporis reprehenderit
-                           laboriosam accusamus dolores exercitationem
-                           consectetur.
-                        </td>
-                     </tr>
-                     <tr>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur?
-                        </td>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Vero quaerat reiciendis, corporis reprehenderit
-                           laboriosam accusamus dolores exercitationem
-                           consectetur.
-                        </td>
-                     </tr>
-                     <tr>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur?
-                        </td>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Vero quaerat reiciendis, corporis reprehenderit
-                           laboriosam accusamus dolores exercitationem
-                           consectetur.
-                        </td>
-                     </tr>
-                     <tr>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur?
-                        </td>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Vero quaerat reiciendis, corporis reprehenderit
-                           laboriosam accusamus dolores exercitationem
-                           consectetur.
-                        </td>
-                     </tr>
-                     <tr>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur?
-                        </td>
-                        <td
-                           class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Vero quaerat reiciendis, corporis reprehenderit
-                           laboriosam accusamus dolores exercitationem
-                           consectetur.
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
+                förblir vit, använder flex för att se till att tabellen alltid är centrerad på sidan -->
+               <div class="is-flex is-justify-content-center">
+                  <table class="table is-bordered mt-4 mb-6" data-theme="light">
+                     <thead>
+                        <tr class="is-danger">
+                           <th class="has-text-danger-dark is-size-5 p-3">
+                              Fråga
+                           </th>
+                           <th class="has-text-danger-dark is-size-5 p-3">
+                              Svar
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur?
+                           </td>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Vero quaerat reiciendis, corporis
+                              reprehenderit laboriosam accusamus dolores
+                              exercitationem consectetur.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur?
+                           </td>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Vero quaerat reiciendis, corporis
+                              reprehenderit laboriosam accusamus dolores
+                              exercitationem consectetur.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur?
+                           </td>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Vero quaerat reiciendis, corporis
+                              reprehenderit laboriosam accusamus dolores
+                              exercitationem consectetur.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur?
+                           </td>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Vero quaerat reiciendis, corporis
+                              reprehenderit laboriosam accusamus dolores
+                              exercitationem consectetur.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur?
+                           </td>
+                           <td
+                              class="has-text-danger-dark p-3 bigger-line-height bigger-letter-spacing">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Vero quaerat reiciendis, corporis
+                              reprehenderit laboriosam accusamus dolores
+                              exercitationem consectetur.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
 
                <!-- för användare som har en fråga som inte besvaras bland vanliga frågor -->
                <div class="has-text-centered">
@@ -348,7 +358,7 @@
                <div class="grid is-column-gap-5">
                   <!-- varje sektion i footer blir en cell i griden -->
                   <!-- sektionen "allmänt" tar upp 2 kolumner för att breda ut sig lite -->
-                  <section class="cell is-col-span-2">
+                  <div class="cell is-col-span-2">
                      <h2 class="is-size-5 has-text-weight-bold">Allmänt</h2>
                      <p class="is-italic bigger-line-height">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -358,8 +368,8 @@
                         eveniet repellat at impedit. Natus adipisci ut iste
                         enim, sint eveniet!
                      </p>
-                  </section>
-                  <section class="cell">
+                  </div>
+                  <div class="cell">
                      <h2 class="is-size-5 has-text-weight-bold">Navigation</h2>
                      <nav>
                         <ul>
@@ -393,8 +403,8 @@
                            </li>
                         </ul>
                      </nav>
-                  </section>
-                  <section class="cell">
+                  </div>
+                  <div class="cell">
                      <h2 class="is-size-5 has-text-weight-bold">Kontakt</h2>
                      <ul class="is-italic">
                         <li class="bigger-line-height">MeowMart</li>
@@ -402,12 +412,12 @@
                         <li class="bigger-line-height">123 45 Stadstad</li>
                         <li class="bigger-line-height">kontakt@meowmart.com</li>
                      </ul>
-                  </section>
-                  <section class="cell is-col-span-4 has-text-centered">
+                  </div>
+                  <div class="cell is-col-span-4 has-text-centered">
                      <h2 class="is-size-7 mt-4 bigger-letter-spacing">
                         MeowMart.com <br />Copyright © 2025 Lova Avoltén
                      </h2>
-                  </section>
+                  </div>
                </div>
             </footer>
          </div>

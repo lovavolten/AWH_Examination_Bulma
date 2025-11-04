@@ -7,7 +7,7 @@
 }
 
 html {
-   /* bakgrundsfärg på själva dokumentet som skulle synas i det fall att innehållet inte täcker hela sidan */
+   /* bakgrundsfärg på själva dokumentet som skulle synas i det fall att innehållet inte täcker hela skärmen */
    background-color: #35191d;
 }
 
@@ -17,11 +17,6 @@ html {
    font-family: Raleway, "Gill Sans", "Trebuchet MS", Arial, sans-serif;
    /* ökar avtståndet mellan bokstäver lite för ökad läsbarhet */
    letter-spacing: 0.18rem;
-}
-
-h1 {
-   /* bestämmer storlek på h1 då bulmas standard storlekar kändes för små för så som jag vill ha h1 */
-   font-size: 5.5rem;
 }
 
 .bigger-line-height {
@@ -37,6 +32,11 @@ h1 {
 .searchbar {
    /* sätter tjocklek och färg på ramen runt sökrutan eftersom bulmas standard val inte matchade */
    border: 2px solid #33000a;
+}
+
+.hero-title {
+   /* bestämmer textstorlek på "hero" då bulmas standard storlekar kändes för små för så som jag vill ha */
+   font-size: clamp(4rem, 5.5vw, 7rem);
 }
 
 .hero {
@@ -56,10 +56,4 @@ h1 {
 .price {
    /* ger en liten skugga till texten för priset på "card" elementen, smaksak */
    text-shadow: -1.5px 1.5px 2px #b96072;
-}
-
-table {
-   /* centrerar tabellen oavsett skärmstorlek, smaksak */
-   margin-left: auto;
-   margin-right: auto;
 }

@@ -37,7 +37,7 @@
                      </a>
                      <a
                         role="button"
-                        class="navbar-burger bigger-line-height"
+                        class="navbar-burger bigger-line-height has-text-danger-dark"
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample">
@@ -98,10 +98,16 @@
 
             <!-- hero -->
             <!-- "hero" enligt bulma, blir också den andra cellen i huvud griden -->
-            <div class="cell hero is-warning has-text-danger-100 p-6">
-               <div class="hero-body has-text-centered has-text-weight-medium">
-                  <h1 class="mt-6">MeowMart</h1>
-                  <p class="is-size-4 is-italic">Köp en katt online</p>
+            <div class="cell hero p-6">
+               <div class="hero-body has-text-centered">
+                  <p
+                     class="title mt-6 mb-2 hero-title has-text-weight-medium has-text-white">
+                     MeowMart
+                  </p>
+                  <p
+                     class="subtitle is-size-4 is-italic has-text-weight-medium has-text-white">
+                     Köp en katt online
+                  </p>
                </div>
             </div>
 
@@ -109,11 +115,11 @@
             <!-- main blir den tredje cellen i huvud griden men är även en grid container i sig, med bestämt mellanrum mellan celler -->
             <main class="cell grid is-gap-5 pt-6 px-6 mb-0">
                <!-- allmänt om meowmart, blir den första cellen i griden -->
-               <div class="cell pb-6">
-                  <h2
+               <section class="cell pb-6">
+                  <h1
                      class="title is-2 has-text-weight-bold has-text-danger-dark">
                      Om MeowMart
-                  </h2>
+                  </h1>
                   <p class="bigger-line-height">
                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                      Libero perferendis repellendus quidem exercitationem
@@ -129,10 +135,10 @@
                      commodi dignissimos dolorum nihil in totam expedita nemo.
                      Laborum, recusandae neque.
                   </p>
-                  <h3
+                  <h2
                      class="subtitle is-4 has-text-weight-bold has-text-danger-dark mt-5">
                      Underrubrik
-                  </h3>
+                  </h2>
                   <p class="bigger-line-height">
                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                      Minus ducimus sequi molestias? Fugiat sequi culpa
@@ -140,10 +146,10 @@
                      saepe ratione odit perspiciatis, fugiat itaque impedit
                      eveniet.
                   </p>
-               </div>
+               </section>
 
                <!-- mer ingående fakta om meowmart samt kontakt info, blir den andra cellen i griden -->
-               <div class="cell p-5 mb-6 has-background-danger-90">
+               <section class="cell p-5 mb-6 has-background-danger-90">
                   <!-- bilden åker till vänster så att texten börjar direkt bredvid den -->
                   <figure class="image is-128x128 mr-4 is-pulled-left">
                      <img src="images/cat_profile.jpg" alt="En katt" />
@@ -158,10 +164,10 @@
                      animi molestias non culpa qui, alias doloremque,
                      consequatur, libero beatae.
                   </p>
-                  <h3
+                  <h2
                      class="subtitle is-4 has-text-weight-bold has-text-danger-dark mt-5">
                      Kontakt
-                  </h3>
+                  </h2>
                   <p class="bigger-line-height">
                      Lorem, ipsum dolor sit amet consectetur adipisicing elit?
                      Nemo magni quidem ipsa repudiandae debitis corrupti cumque
@@ -173,7 +179,7 @@
                      <li class="bigger-line-height">123 45 Stadstad</li>
                      <li class="bigger-line-height">kontakt@meowmart.com</li>
                   </ul>
-               </div>
+               </section>
             </main>
 
             <!-- footer -->
@@ -184,7 +190,7 @@
                <div class="grid is-column-gap-5">
                   <!-- varje sektion i footer blir en cell i griden -->
                   <!-- sektionen "allmänt" tar upp 2 kolumner för att breda ut sig lite -->
-                  <section class="cell is-col-span-2">
+                  <div class="cell is-col-span-2">
                      <h2 class="is-size-5 has-text-weight-bold">Allmänt</h2>
                      <p class="is-italic bigger-line-height">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -194,8 +200,8 @@
                         eveniet repellat at impedit. Natus adipisci ut iste
                         enim, sint eveniet!
                      </p>
-                  </section>
-                  <section class="cell">
+                  </div>
+                  <div class="cell">
                      <h2 class="is-size-5 has-text-weight-bold">Navigation</h2>
                      <nav>
                         <ul>
@@ -229,8 +235,8 @@
                            </li>
                         </ul>
                      </nav>
-                  </section>
-                  <section class="cell">
+                  </div>
+                  <div class="cell">
                      <h2 class="is-size-5 has-text-weight-bold">Kontakt</h2>
                      <ul class="is-italic">
                         <li class="bigger-line-height">MeowMart</li>
@@ -238,12 +244,12 @@
                         <li class="bigger-line-height">123 45 Stadstad</li>
                         <li class="bigger-line-height">kontakt@meowmart.com</li>
                      </ul>
-                  </section>
-                  <section class="cell is-col-span-4 has-text-centered">
+                  </div>
+                  <div class="cell is-col-span-4 has-text-centered">
                      <h2 class="is-size-7 mt-4 bigger-letter-spacing">
                         MeowMart.com <br />Copyright © 2025 Lova Avoltén
                      </h2>
-                  </section>
+                  </div>
                </div>
             </footer>
          </div>
